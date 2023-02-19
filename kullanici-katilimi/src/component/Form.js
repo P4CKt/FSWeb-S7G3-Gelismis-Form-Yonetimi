@@ -11,12 +11,12 @@ const formSchema = Yup.object().shape({
       .min(5, "İsim en az 5 karakter olmalı"),
     email: Yup
       .string()
-      .email("Must be a valid email address.")
-      .required("Must include email address."),
+      .email("Geçerli e-posta giriniz")
+      .required("E-posta alanı zorunludur"),
     password: Yup
       .string()
-      .required("Password is Required")
-      .min(6, "Passwords must be at least 6 characters long."),
+      .required("Şifre alanı zorunludur")
+      .min(6, "Şifreniz 6 karakterden fazla olmalı"),
     KullanimSartlari: Yup
       .boolean()
       .oneOf([true], "Lütfen Şartları Kabul Ediniz")
